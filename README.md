@@ -32,7 +32,7 @@ The core goal of this project is to translate EPUB content with no structural lo
 - Upload an EPUB, choose source and target languages, and receive a fully translated EPUB as output
 - The translated file is a valid EPUB: same chapter structure, same formatting, same links — just in a different language
 - Supports long-form documents (novels, textbooks) with resumable, checkpointed jobs
-- Includes a built-in web UI for monitoring progress, reviewing output, and editing translations inline
+- Includes a built-in web UI for monitoring progress
 
 ---
 
@@ -126,7 +126,7 @@ For professional or precision use cases, automated glossary extraction isn't eno
 │           FastAPI Backend                │
 │                                          │
 │  Job management, SSE progress streaming  │
-│  Glossary review API, inline edit API    │
+│  Glossary review API                     │
 │  Download endpoint                       │
 └─────────────────┬────────────────────────┘
                   │
@@ -150,7 +150,7 @@ The frontend is a React + TypeScript SPA served as static files by FastAPI. The 
 
 **Glossary review page** — Inspect and edit every extracted term before translation begins (glossary review mode only).
 
-**Result viewer** — Side-by-side original and translated chapter view. Supports inline editing of translation paragraphs, with changes saved back to the EPUB.
+**Result viewer** — Side-by-side original and translated chapter view.
 
 ---
 
