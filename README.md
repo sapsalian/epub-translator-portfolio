@@ -81,23 +81,23 @@ EPUB Input
 
 ### 1. Keeping inline markup intact through translation
 
-EPUB paragraphs are full of inline tags mixed into the prose — links, emphasis, annotations, and more. The challenge is that LLMs tend to rewrite or rearrange markup when it appears in the prompt. Solving this required a clean separation between what the LLM sees and what the final document contains, with a reliable mechanism to reunite the two afterward.
+EPUB paragraphs are full of inline tags mixed into the prose — links, emphasis, annotations, and more. LLMs tend to rewrite or rearrange markup when it appears in the prompt, so even an accurate translation can leave the document structurally broken. We designed a clean separation between what the LLM sees and what the final document contains, with a reliable mechanism to reunite the two afterward.
 
 ### 2. Knowing what not to translate
 
-Not everything in an XHTML document is prose. Code blocks, mathematical expressions, SVG diagrams, and preformatted text must be left entirely untouched — including all their descendants. Identifying these regions and propagating the "skip" decision consistently through nested document trees was a non-trivial filtering problem.
+Not everything in an XHTML document is prose. Code blocks, mathematical expressions, SVG diagrams, and preformatted text must be left entirely untouched — including all their descendants. We implemented a filtering layer that identifies these regions and propagates the skip decision consistently through nested document trees.
 
 ### 3. Maintaining translation consistency across a long document
 
-A full-length book is too large to translate in a single context window. When the document is split into batches, the same term can be translated differently in different sections, and each batch loses awareness of what came before. The challenge was building a lightweight context layer — glossary and summaries — that travels with every batch without ballooning token costs.
+A full-length book is too large to translate in a single context window. When the document is split into batches, the same term can be translated differently in different sections, and each batch loses awareness of what came before. We designed a lightweight context layer — glossary and summaries — that travels with every batch without ballooning token costs.
 
 ### 4. Resuming interrupted jobs on long documents
 
-Translating a novel involves hundreds of API calls. Network failures, rate limits, or manual stops are inevitable. Re-translating from scratch each time is wasteful and expensive. The challenge was designing a checkpointing system fine-grained enough to resume mid-document without duplicating work, while keeping the state small and portable.
+Translating a novel involves hundreds of API calls. Network failures, rate limits, or manual stops are inevitable, and re-translating from scratch each time is wasteful. We implemented a checkpointing system fine-grained enough to resume mid-document without duplicating work, while keeping the persisted state small and portable.
 
 ### 5. Human-in-the-loop glossary review
 
-For professional or precision use cases, automated glossary extraction isn't enough — a human needs to verify domain terms before translation begins. The challenge was designing a workflow that can pause mid-pipeline, surface extracted terms for review, accept edits, and resume seamlessly — without complicating the standard automated flow.
+For professional or precision use cases, automated glossary extraction isn't enough — a human needs to verify domain terms before translation begins. We designed a workflow that pauses mid-pipeline, surfaces extracted terms for review, accepts edits, and resumes seamlessly — without complicating the standard automated flow.
 
 ---
 
