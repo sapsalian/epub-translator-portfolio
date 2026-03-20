@@ -164,6 +164,8 @@ The frontend is a React + TypeScript SPA served as static files by FastAPI. The 
 
 ## Project Status
 
+**In development** — 2025.10 ~ present
+
 This repository contains documentation only. The source code is not publicly available.
 
 ---
