@@ -8,7 +8,10 @@ An AI-powered EPUB translation tool that produces fluent, context-aware translat
 
 ## Demo
 
-*(Screenshots and demo video coming soon)*
+https://github.com/user-attachments/assets/fbfd4a3b-6cd6-47c8-8aec-3006106d7a4d
+
+- Shell command output indentation and formatting preserved as-is
+- Body text translated naturally and contextually in Korean
 
 ---
 
