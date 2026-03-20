@@ -8,6 +8,8 @@ EPUB 전자책의 구조와 서식을 완전히 보존하면서 문맥을 고려
 
 ## 데모
 
+**나란히 비교 — *The Linux Command Line* (원문 EN ↔ 번역 KO)**
+
 https://github.com/user-attachments/assets/fbfd4a3b-6cd6-47c8-8aec-3006106d7a4d
 
 - 쉘 명령어 / 코드 및 실행 결과의 들여쓰기·포맷 보존

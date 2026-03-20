@@ -8,6 +8,8 @@ An AI-powered EPUB translation tool that produces fluent, context-aware translat
 
 ## Demo
 
+**Side-by-side comparison — *The Linux Command Line* (EN ↔ KO)**
+
 https://github.com/user-attachments/assets/fbfd4a3b-6cd6-47c8-8aec-3006106d7a4d
 
 - Shell commands / code blocks and their output indentation and formatting preserved as-is
