@@ -10,7 +10,7 @@ An AI-powered EPUB translation tool that produces fluent, context-aware translat
 
 https://github.com/user-attachments/assets/fbfd4a3b-6cd6-47c8-8aec-3006106d7a4d
 
-- Shell command output indentation and formatting preserved as-is
+- Shell commands / code blocks and their output indentation and formatting preserved as-is
 - Body text translated naturally and contextually in Korean
 
 ---
